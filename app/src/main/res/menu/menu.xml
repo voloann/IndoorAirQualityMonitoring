@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home" android:title="Home" android:icon="@drawable/ic_homeoutline"/>
+    <item android:id="@+id/graph" android:title="Graph" android:icon="@drawable/ic_graph"/>
+    <item android:id="@+id/health" android:title="Health" android:icon="@drawable/ic_healthcare"/>
+    <item android:id="@+id/Account" android:title="Account" android:icon="@drawable/ic__useravatar"/>
+</menu>

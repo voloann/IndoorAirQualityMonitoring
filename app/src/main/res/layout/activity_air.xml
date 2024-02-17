@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_1"
+    tools:context=".mainfragment.AirActivity">
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/arrow_left_light" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/ic_language"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_uiot" />
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/detail"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/b_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="23dp"
+                    android:textColor="@color/sloid"
+                    android:layout_marginBottom="10dp"
+                    android:text="Vị trí"
+                    android:layout_centerVertical="true"
+                    android:drawableStart="@drawable/ic_location"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/place_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Bien Hoa"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/sloid"
+                    android:text="Monday 11 12 | 11PM"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/country">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/texqu"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        android:layout_height="wrap_content"
+                        android:text="Air Quality Index(AQI)"
+                        />
+
+                    <!-- Văn bản Air Quality Index -->
+                    <TextView
+                        android:id="@+id/aqi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/texqu"
+                        android:textSize="100dp"/>
+
+                    <TextView
+                        android:id="@+id/kk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GOOD"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/aqi"
+                        android:textSize="25dp"/>
+                </RelativeLayout>
+
+                <!-- Phần chứa hình ảnh -->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="250dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/img_9"
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/loadtime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linear"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Thời gian cập nhật: "
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loadtime"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_editext"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:text="Good"
+                        android:textSize="13.5dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Moderate"
+                        android:textSize="13.5dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Poor"
+                        android:textSize="13.5dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Unhealthy"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:text="Severe"
+                        android:textSize="13.5dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Hazardous"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:progressDrawable="@drawable/custom_seekbar"
+                    android:thumb="@android:color/transparent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="15dp"
+                        android:text="0" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="50" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingRight="30dp"
+                        android:text="100" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="150" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="200" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="300+" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/custom_editext"
+            android:layout_height="wrap_content" >
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/para"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Các chỉ số"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+
+                android:layout_below="@+id/seekBar"
+                />
+            <TableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/custom_editext"
+                android:layout_below="@+id/para">
+
+                <!-- Dòng 1 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Ô 1 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_cloud" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/pm25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:text="2"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_alignParentTop="true" />
+
+                            <TextView
+                                android:id="@+id/pm_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:text="PM2.5"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"
+                                android:layout_below="@+id/pm25" /> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- Ô 2 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/custom_blue"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_cloud"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/pm10"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/white"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:text="11.9" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PM10"
+                                android:textSize="12dp"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </LinearLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- Dòng 2 -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Ô 3 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/o3"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/o3"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:text="430" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="O3"
+                                android:textSize="12dp"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Ô 4 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/no" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/NO"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="99"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_alignParentTop="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NO"
+                                android:textSize="12dp"
+                                android:layout_below="@+id/NO"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+
+<!--                dòng 3-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- Ô 3 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/co2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/co2"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:text="430" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CO2"
+                                android:textSize="12dp"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Ô 4 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/co2" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/co2_aver"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="99"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_alignParentTop="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="CO2 Average"
+                                android:textSize="12dp"
+                                android:layout_below="@+id/co2_aver"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+
+<!--                Dòng 4-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- Ô 3 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/no2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/NO2"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:text="430" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NO2"
+                                android:textSize="12dp"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Ô 4 -->
+                    <LinearLayout
+                        android:layout_width="35dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/custom_blue"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/so2" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:id="@+id/SO2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="99"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:layout_alignParentTop="true" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SO2"
+                                android:textSize="12dp"
+                                android:layout_below="@+id/SO2"
+                                android:textColor="@color/white1"
+                                android:layout_marginTop="8dp"/> <!-- Thêm margin nếu muốn có khoảng cách giữa chữ -->
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/khuyenghi"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tableLayout"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/line"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="23dp"
+                    android:textStyle="bold"
+                    android:text="Khuyến nghị về sức khỏe"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/ic_activity1"
+                        android:layout_width="50dp"
+                        android:src="@drawable/mask"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:id="@+id/actvity1"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="30sp"
+                        android:textColor="@color/black"
+                        android:text="Mở cửa đoán không khí vào"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/ic_activity2"
+                        android:layout_width="50dp"
+                        android:src="@drawable/mask"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:id="@+id/activity2"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="30sp"
+                        android:text="Mở cửa đoán không khí vào"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/ic_activity3"
+                        android:layout_width="50dp"
+                        android:src="@drawable/park"
+                        android:layout_height="50dp"/>
+                    <TextView
+                        android:id="@+id/activity3"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="30sp"
+                        android:textColor="@color/black"
+                        android:text="Mở cửa đoán không khí vào"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/khuyenghi"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/line"/>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Location"
+                    android:textColor="@color/white"
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
+
+                <org.osmdroid.views.MapView
+                    android:id="@+id/mapVieww2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentStart="true"
+                    android:clickable="true" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

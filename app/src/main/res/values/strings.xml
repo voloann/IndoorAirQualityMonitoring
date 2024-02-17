@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name" translatable="false">Indoor Air Quality</string>
+    <string name="signIN">SIGN IN</string>
+    <string name="signUP">SIGN UP</string>
+    <string name="continueWithGoogle">CONTINUE WITH GOOGLE</string>
+    <string name="resetPassword">Reset your password ?</string>
+    <string name="or">OR</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="enterRegisteredEmail">Enter your registered email</string>
+    <string name="send">SEND</string>
+    <string name="messageResetPassword">Please enter your registered email address correctly so we can send you a password reset support email</string>
+    <string name="logout">Log out</string>
+    <string name="loginSuccessful">Login successful</string>
+    <string name="logoutSuccessful">Logout successful</string>
+    <string name="loginFail">Username or Password are incorrect</string>
+    <string name="emailExists">Email already exists</string>
+    <string name="emailInvalid">Invalid email address</string>
+    <string name="usernameExists">Username already exists</string>
+    <string name="passwordFail">Password confirmation does not match</string>
+    <string name="signUpSuccessful">"Sign up successfully"</string>
+    <string name="passWordLeast">Password must be at least 8 characters long</string>
+    <string name="usernameLeast">Username must be at least 5 characters long</string>
+    <string name="fullInformation">Please complete all information</string>
+    <string name="enterUsername">Please enter a username</string>
+    <string name="enterEmail">"Please enter a email"</string>
+    <string name="enterPassword">Please enter a password</string>
+    <string name="enterRePassword">Please enter confirm password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="18"
+    android:viewportHeight="24">
+
+  <!-- Path cho trạng thái bình thường -->
+  <path
+      android:strokeWidth="1"
+      android:pathData="M6.5,9.5L4,12M4,12L6.5,14.5M4,12H14"
+      android:fillColor="#00000000"
+      android:strokeColor="#222222"
+      android:strokeLineCap="round"/>
+
+  <!-- Path cho trạng thái nhấn -->
+  <path
+      android:strokeWidth="1"
+      android:pathData="M6.5,9.5L4,12M4,12L6.5,14.5M4,12H14"
+      android:fillColor="#FF808080"
+      android:strokeColor="#222222"
+      android:strokeLineCap="round"/>
+</vector>
